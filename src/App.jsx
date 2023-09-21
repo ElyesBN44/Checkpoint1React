@@ -7,20 +7,17 @@ import {
   MDBNavbarToggler,
   MDBContainer,
   MDBIcon,
+  MDBBtn,
   MDBCollapse
 } from 'mdb-react-ui-kit';
-import 'mdb-react-ui-kit/dist/css/mdb.min.css';
-import "@fortawesome/fontawesome-free/css/all.min.css";
-
 
 export default function App() {
   const [showBasic, setShowBasic] = useState(false);
   return (
     <header>
-      <MDBNavbar expand='lg' light bgColor='white'>
+      <MDBNavbar expand='lg' light bgColor='white' fixed>
         <MDBContainer fluid>
           <MDBNavbarToggler
-            onClick={() => setShowBasic(!showBasic)}
             aria-controls='navbarExample01'
             aria-expanded='false'
             aria-label='Toggle navigation'
@@ -49,12 +46,14 @@ export default function App() {
       </MDBNavbar>
 
       <div className='p-5 text-center bg-light'>
-        <h1 className='mb-3'>Main</h1>
-        <h4 className='mb-3'>SubMain</h4>
-        <a className='btn btn-primary' href='' role='button'>
-          Click Me
-        </a>
+        <h1 className='mb-3'>Heading</h1>
+        <h4 className='mb-3'>Subheading</h4>
+        <MDBBtn tag="a" outline size="lg">
+          Call to action
+        </MDBBtn>
       </div>
+
+     
     </header>
   );
 }
